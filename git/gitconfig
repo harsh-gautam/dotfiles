@@ -2,7 +2,6 @@
     ui = true
 [core]
     editor = nvim
-    pager = diff-so-fancy | less --tabs=4 -RFX
     excludesfile = ~/.config/git/ignore
 [color "diff-highlight"]
     oldNormal = red bold
@@ -19,7 +18,7 @@
 [push]
     default = matching
 [credential]
-    helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+        helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
 [alias]
     fixup = "!sh -c '(git diff-files --quiet || (echo Unstaged changes, please commit or stash with --keep-index; exit 1)) && COMMIT=$(git rev-parse $1) && git commit --fixup=$COMMIT && git rebase -i --autosquash $COMMIT~1' -"
 
